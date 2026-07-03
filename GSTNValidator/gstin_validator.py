@@ -88,6 +88,11 @@ def run_user_input():
     print(f"Reason: {result['reason']}")
 
 
+def pause_before_exit():
+    """Keeps the console window open until the user has read the result."""
+    input("\nPress Enter to exit...")
+
+
 if __name__ == "__main__":
     choice = input("Test cases (T) or enter own GSTIN (U)? ").strip().upper()
     if choice == "T":
@@ -96,3 +101,4 @@ if __name__ == "__main__":
         run_user_input()
     else:
         print("Invalid choice. Enter T or U.")
+    pause_before_exit()
